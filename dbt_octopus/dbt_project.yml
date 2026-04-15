@@ -1,0 +1,87 @@
+name: 'octopus_pricing'
+version: '1.0.0'
+config-version: 2
+
+profile: 'octopus_pricing'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+dispatch:
+  - macro_namespace: dbt
+    search_order: ['dbt_project_evaluator', 'dbt']
+
+# Default variable values — override via `dbt run --vars '{"electricity_margin_ct_per_kwh": 2.0}'`
+vars:
+  # Margin added on top of (basecost + procurement) before VAT, in ct/kWh
+  # Standard margin — used in price lists submitted to PCW portals (do not change without updating exports)
+  electricity_margin_ct_per_kwh: 1.5
+  gas_margin_ct_per_kwh: 0.5
+
+  # Aggressive growth scenario: lower margins to improve competitive ranking
+  electricity_margin_aggressive_ct_per_kwh: 0.8
+  gas_margin_aggressive_ct_per_kwh: 0.2
+
+  # Conservative scenario: higher margins for profitability analysis
+  electricity_margin_conservative_ct_per_kwh: 2.5
+  gas_margin_conservative_ct_per_kwh: 1.0
+
+  # Margin on standing charge, in EUR/year
+  electricity_standing_charge_margin_eur_per_year: 10.0
+  gas_standing_charge_margin_eur_per_year: 5.0
+
+  # Standard consumption reference levels for market analysis (kWh/year)
+  # Override via: dbt run --vars '{"consumption_level_low_kwh": 800}'
+  consumption_level_low_kwh: 1000
+  consumption_level_medium_kwh: 2000
+  consumption_level_high_kwh: 4500
+  consumption_level_max_kwh: 12000
+
+  # Gas-specific consumption reference levels — gas customers consume much more
+  gas_consumption_level_low_kwh: 5000
+  gas_consumption_level_medium_kwh: 12000
+  gas_consumption_level_high_kwh: 22000
+  gas_consumption_level_max_kwh: 40000
+
+  # Target signup bonus per product (EUR); automatically capped at 15% of annual price per band
+  electricity_signup_bonus_eur: 100.0
+  gas_signup_bonus_eur: 140.0
+
+models:
+  octopus_pricing:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+  dbt_artifacts:
+    +enabled: false
+  elementary:
+    +enabled: false
+  dbt_project_evaluator:
+    +enabled: false
+
+tests:
+  dbt_artifacts:
+    +enabled: false
+  elementary:
+    +enabled: false
+  dbt_project_evaluator:
+    +enabled: false
+
+seeds:
+  dbt_artifacts:
+    +enabled: false
+  elementary:
+    +enabled: false
+  dbt_project_evaluator:
+    +enabled: false

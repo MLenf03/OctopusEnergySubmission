@@ -1,0 +1,148 @@
+version: 2
+
+models:
+  - name: int_price_components
+    description: >
+      Intermediate model that joins each Octopus product to every applicable
+      basecost row (matched on energy_type), every margin scenario
+      (standard / aggressive / conservative via stg_margin_scenarios), and
+      every applicable consumption reference level (via stg_consumption_levels).
+      Outputs one row per (scenario × product × postcode × consumption_level)
+      with all price components including the capped signup bonus.
+
+      Grain: scenario × product_code × postcode × consumption_level_kwh
+
+      Consumed by:
+        fct_price_list               (filters to scenario = 'standard')
+        fct_market_analysis_scenarios (uses all three scenarios)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - scenario
+            - product_code
+            - postcode
+            - consumption_level_kwh
+    columns:
+      - name: scenario
+        description: "Margin scenario identifier: standard | aggressive | conservative"
+        tests:
+          - not_null
+      - name: elec_margin_ct
+        description: "Electricity margin applied in this scenario (ct/kWh)"
+        tests:
+          - not_null
+      - name: gas_margin_ct
+        description: "Gas margin applied in this scenario (ct/kWh)"
+        tests:
+          - not_null
+      - name: product_code
+        description: "Product identifier"
+        tests:
+          - not_null
+      - name: product_name
+        description: "Human-readable product name"
+        tests:
+          - not_null
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+      - name: postcode
+        description: "German postcode"
+        tests:
+          - not_null
+      - name: town
+        description: "Town / city name"
+      - name: consumption_from
+        description: "Lower bound of the basecost consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: consumption_to
+        description: "Upper bound of the basecost consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: basecost_net_unit_rate_eur_per_kwh
+        description: "Regulatory/network unit rate component (EUR/kWh, net)"
+        tests:
+          - not_null
+      - name: procurement_cost_eur_per_kwh
+        description: "Wholesale procurement cost (EUR/kWh, net)"
+        tests:
+          - not_null
+      - name: margin_eur_per_kwh
+        description: >
+          Scenario-specific effective margin component (EUR/kWh, net).
+          Equals GREATEST(scenario_margin, 0.0), so it is always >= 0 —
+          the net unit rate can never fall below total cost (loss-leader pricing
+          is illegal and this floor is hard-coded).
+      - name: basecost_net_standing_charge_eur_per_year
+        description: "Net annual standing charge from basecost data (EUR/year)"
+        tests:
+          - not_null
+      - name: vat_rate
+        description: "VAT rate as a decimal (e.g. 0.19)"
+        tests:
+          - not_null
+      - name: lead_cost_eur
+        description: "One-off customer acquisition cost in EUR"
+        tests:
+          - not_null
+      - name: expected_customer_life_time_years
+        description: "Expected customer lifetime in years"
+        tests:
+          - not_null
+      - name: price_guarantee_months
+        description: "Number of months the price is guaranteed"
+        tests:
+          - not_null
+      - name: contract_length_months
+        description: "Minimum contract duration in months"
+        tests:
+          - not_null
+      - name: net_unit_rate_eur_per_kwh
+        description: "Sum of basecost + procurement + effective margin (EUR/kWh, net)"
+        tests:
+          - not_null
+      - name: gross_unit_rate_eur_per_kwh
+        description: "Scenario-specific gross unit rate incl. margin and VAT"
+        tests:
+          - not_null
+      - name: gross_standing_charge_eur_per_month
+        description: "Gross monthly standing charge incl. margin and VAT"
+        tests:
+          - not_null
+      - name: target_signup_bonus_eur
+        description: "Configured signup bonus for this energy type before the 15% cap is applied"
+        tests:
+          - not_null
+      - name: consumption_level_kwh
+        description: "Annual consumption reference level (kWh) from stg_consumption_levels"
+        tests:
+          - not_null
+      - name: consumption_label
+        description: "Human-readable consumption tier: low / medium / high / max"
+        tests:
+          - not_null
+      - name: annual_gross_eur
+        description: "Annual gross price at the reference consumption level (gross_unit_rate × consumption_level_kwh + gross_standing_charge × 12)"
+        tests:
+          - not_null
+      - name: pcw_consumption_from
+        description: >
+          Lower boundary of the PCW submission consumption band.
+          Lowest tier: basecost band consumption_from.
+          All other tiers: consumption_level_kwh (= previous tier's upper bound + 1).
+      - name: annual_gross_at_from_eur
+        description: "Annual gross price evaluated at pcw_consumption_from (used for the 15% bonus cap)"
+      - name: signup_bonus_eur
+        description: >
+          Signup bonus capped at 15% of annual gross at the PCW band's lower boundary
+          (pcw_consumption_from), ensuring the bonus is valid for the lowest consumer
+          in the band (regulatory requirement).
+        tests:
+          - not_null
+      - name: annual_cost_after_bonus_eur
+        description: "Annual gross price (at reference consumption) minus the capped signup bonus"
+        tests:
+          - not_null
+

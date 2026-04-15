@@ -1,0 +1,25 @@
+scenario,energy_type,product,consumption_label,consumption_level_kwh,contract_length_months,margin_ct_per_kwh,total_market_segments,segments_where_cheapest,segments_where_top_3,pct_cheapest,pct_top_3,avg_rank,avg_percentile,avg_delta_vs_cheapest_eur,avg_our_annual_cost_eur,avg_market_annual_cost_eur
+aggressive,ELECTRICITY,Select+ Secure 12 Strom,low,1000,12,0.8,10,0,0,0.0,0.0,19.5,32.9,381.68,382.45,388.22
+conservative,ELECTRICITY,Select+ Secure 12 Strom,low,1000,12,2.5,10,0,0,0.0,0.0,28.4,48.6,401.61,402.38,388.22
+standard,ELECTRICITY,Select+ Secure 12 Strom,low,1000,12,1.5,10,0,0,0.0,0.0,22.8,38.7,389.89,390.66,388.22
+aggressive,ELECTRICITY,Select+ Secure 12 Strom,medium,2000,12,0.8,10,0,2,0.0,20.0,4.9,7.3,237.06,595.24,664.02
+conservative,ELECTRICITY,Select+ Secure 12 Strom,medium,2000,12,2.5,10,0,1,0.0,10.0,19.3,34.2,276.15,634.33,664.02
+standard,ELECTRICITY,Select+ Secure 12 Strom,medium,2000,12,1.5,10,0,1,0.0,10.0,10.4,17.6,253.06,611.24,664.02
+aggressive,ELECTRICITY,Select+ Secure 12 Strom,high,4500,12,0.8,10,0,3,0.0,30.0,7.8,14.3,93.6,1318.42,1398.82
+conservative,ELECTRICITY,Select+ Secure 12 Strom,high,4500,12,2.5,10,0,0,0.0,0.0,28.8,58.0,184.64,1409.45,1398.82
+standard,ELECTRICITY,Select+ Secure 12 Strom,high,4500,12,1.5,10,0,1,0.0,10.0,15.3,30.0,131.09,1355.9,1398.82
+aggressive,ELECTRICITY,Select+ Secure 12 Strom,max,12000,12,0.8,10,10,10,100.0,100.0,1.0,,,3492.37,
+conservative,ELECTRICITY,Select+ Secure 12 Strom,max,12000,12,2.5,10,10,10,100.0,100.0,1.0,,,3735.13,
+standard,ELECTRICITY,Select+ Secure 12 Strom,max,12000,12,1.5,10,10,10,100.0,100.0,1.0,,,3592.33,
+aggressive,GAS,OctopusSelect+ 12 Gas,low,5000,12,0.2,10,0,0,0.0,0.0,23.5,45.3,598.11,507.11,494.23
+conservative,GAS,OctopusSelect+ 12 Gas,low,5000,12,1.0,10,0,0,0.0,0.0,39.2,76.9,643.88,552.88,494.23
+standard,GAS,OctopusSelect+ 12 Gas,low,5000,12,0.5,10,0,0,0.0,0.0,28.7,55.7,615.27,524.27,494.23
+aggressive,GAS,OctopusSelect+ 12 Gas,medium,12000,12,0.2,10,0,0,0.0,0.0,17.7,39.1,387.42,1047.03,1071.84
+conservative,GAS,OctopusSelect+ 12 Gas,medium,12000,12,1.0,10,0,0,0.0,0.0,38.3,87.4,501.66,1161.27,1071.84
+standard,GAS,OctopusSelect+ 12 Gas,medium,12000,12,0.5,10,0,0,0.0,0.0,24.5,55.0,430.26,1089.87,1071.84
+aggressive,GAS,OctopusSelect+ 12 Gas,high,22000,12,0.2,10,0,0,0.0,0.0,28.8,74.1,279.86,1968.83,1906.48
+conservative,GAS,OctopusSelect+ 12 Gas,high,22000,12,1.0,10,0,0,0.0,0.0,38.5,100.0,489.3,2178.27,1906.48
+standard,GAS,OctopusSelect+ 12 Gas,high,22000,12,0.5,10,0,0,0.0,0.0,37.3,96.8,358.4,2047.37,1906.48
+aggressive,GAS,OctopusSelect+ 12 Gas,max,40000,12,0.2,10,0,0,0.0,0.0,31.5,97.1,465.65,3614.87,3476.53
+conservative,GAS,OctopusSelect+ 12 Gas,max,40000,12,1.0,10,0,0,0.0,0.0,32.4,100.0,846.45,3995.67,3476.53
+standard,GAS,OctopusSelect+ 12 Gas,max,40000,12,0.5,10,0,0,0.0,0.0,32.4,100.0,608.45,3757.67,3476.53

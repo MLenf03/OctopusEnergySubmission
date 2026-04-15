@@ -1,0 +1,6 @@
+services:
+  dbt:
+    build: .
+    volumes:
+      - ./dbt_octopus/exports:/project/dbt_octopus/exports
+      - ./octopus_pricing.duckdb:/project/octopus_pricing.duckdb

@@ -1,0 +1,75 @@
+version: 2
+
+seeds:
+  - name: basecost
+    description: >
+      Regulatory and network base costs per postcode, town and energy type.
+      These costs are passed through to the customer and vary by location and
+      consumption band.
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+      - name: postcode
+        description: "German postcode (PLZ)"
+      - name: town
+        description: "Town / city name"
+      - name: consumption_from
+        description: "Lower bound of the consumption band (kWh/year)"
+      - name: consumption_to
+        description: "Upper bound of the consumption band (kWh/year)"
+      - name: basecost_net_unit_rate_eur_per_kwh
+        description: "Net (excl. VAT) network & levy cost per kWh"
+      - name: basecost_net_standing_charge_eur_per_year
+        description: "Net (excl. VAT) annual standing charge in EUR"
+
+  - name: product
+    description: >
+      Octopus Energy product catalogue with procurement costs and contract
+      terms for the two PCW tariffs.
+    columns:
+      - name: product_code
+        description: "Unique product identifier"
+      - name: product_name
+        description: "Human-readable product name"
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+      - name: expected_customer_life_time
+        description: "Expected customer lifetime in years"
+      - name: lead_cost
+        description: "One-off customer acquisition cost in EUR"
+      - name: vat
+        description: "VAT rate as a decimal (e.g. 0.19)"
+      - name: net_procurement_cost_ct_per_kwh
+        description: "Wholesale procurement cost in ct/kWh (net, excl. VAT)"
+      - name: price_guarantee_months
+        description: "Number of months the price is guaranteed"
+      - name: contract_length_months
+        description: "Minimum contract duration in months"
+
+  - name: comparison
+    description: >
+      Competitor price snapshot from Check24.de covering electricity and gas
+      tariffs across the same postcodes as our basecost data.
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+      - name: postcode
+        description: "German postcode (PLZ)"
+      - name: location_name
+        description: "Town / city name as reported by Check24"
+      - name: consumption_level_kwh
+        description: "Annual consumption at which competitor prices are quoted (kWh)"
+      - name: provider
+        description: "Competitor provider name"
+      - name: product
+        description: "Competitor product name"
+      - name: unit_rate_ct_per_kwh
+        description: "Gross unit rate in ct/kWh (incl. VAT)"
+      - name: standing_charge_eur_per_year
+        description: "Gross annual standing charge in EUR (incl. VAT)"
+      - name: signup_bonus
+        description: "One-off signup/cash bonus in EUR"
+      - name: price_guarantee_months
+        description: "Number of months the price is guaranteed"
+      - name: contract_length_months
+        description: "Minimum contract term label (e.g. '12 Monate')"

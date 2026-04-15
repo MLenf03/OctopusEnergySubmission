@@ -1,0 +1,220 @@
+version: 2
+
+models:
+  - name: stg_basecost
+    description: >
+      Staged basecost data. Postcodes are zero-padded to 5 digits and all
+      numeric columns are explicitly cast.  Rows that share the same
+      energy_type, postcode, town, unit rate and standing charge are
+      aggregated into a single row: consumption_from = MIN of the band
+      lower bounds, consumption_to = MAX of the band upper bounds.
+      This collapses artificially narrow 1 000 kWh bands (e.g. Freiberg GAS)
+      into meaningful rate tiers.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - energy_type
+            - postcode
+            - consumption_from
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ELECTRICITY', 'GAS']
+      - name: postcode
+        description: "Zero-padded German postcode"
+        tests:
+          - not_null
+      - name: town
+        description: "Town / city name"
+        tests:
+          - not_null
+      - name: consumption_from
+        description: "Lower bound of consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: consumption_to
+        description: "Upper bound of consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: basecost_net_unit_rate_eur_per_kwh
+        description: "Net regulatory/network unit rate in EUR/kWh"
+        tests:
+          - not_null
+      - name: basecost_net_standing_charge_eur_per_year
+        description: "Net annual standing charge in EUR"
+        tests:
+          - not_null
+
+  - name: stg_product
+    description: >
+      Staged product/procurement data. Procurement cost is available in both
+      ct/kWh and EUR/kWh for convenient joins.
+    columns:
+      - name: product_code
+        description: "Unique product identifier"
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: "Human-readable product name"
+        tests:
+          - not_null
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ELECTRICITY', 'GAS']
+      - name: expected_customer_life_time_years
+        description: "Expected customer lifetime in years"
+        tests:
+          - not_null
+      - name: lead_cost_eur
+        description: "One-off customer acquisition cost in EUR"
+        tests:
+          - not_null
+      - name: vat_rate
+        description: "VAT as a decimal (e.g. 0.19 for 19%)"
+        tests:
+          - not_null
+      - name: procurement_cost_ct_per_kwh
+        description: "Wholesale procurement cost in ct/kWh (excl. VAT)"
+        tests:
+          - not_null
+      - name: procurement_cost_eur_per_kwh
+        description: "Wholesale procurement cost in EUR/kWh (excl. VAT)"
+        tests:
+          - not_null
+      - name: price_guarantee_months
+        description: "Number of months the price is guaranteed"
+        tests:
+          - not_null
+      - name: contract_length_months
+        description: "Minimum contract duration in months"
+        tests:
+          - not_null
+
+  - name: stg_comparison
+    description: >
+      Staging model for competitor comparison snapshot (Check24.de).
+      Produces one row per (energy_type × postcode × provider × product ×
+      consumption_level_kwh × contract_length), preserving the exact price that
+      Check24 quotes at each consumption level.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - energy_type
+            - postcode
+            - provider
+            - product_name
+            - consumption_level_kwh
+            - contract_length_months
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ELECTRICITY', 'GAS']
+      - name: postcode
+        description: "Zero-padded German postcode"
+        tests:
+          - not_null
+      - name: location_name
+        description: "Town / city name as reported by Check24"
+        tests:
+          - not_null
+      - name: consumption_level_kwh
+        description: "Consumption level (kWh/year) at which this product was queried on Check24"
+        tests:
+          - not_null
+      - name: provider
+        description: "Competitor provider name"
+        tests:
+          - not_null
+      - name: product_name
+        description: "Competitor product name"
+        tests:
+          - not_null
+      - name: unit_rate_ct_per_kwh
+        description: "Gross unit rate in ct/kWh (incl. VAT)"
+        tests:
+          - not_null
+      - name: standing_charge_eur_per_year
+        description: "Annual standing charge in EUR (incl. VAT)"
+        tests:
+          - not_null
+      - name: standing_charge_eur_per_month
+        description: "Monthly standing charge in EUR (incl. VAT; standing_charge_eur_per_year / 12)"
+        tests:
+          - not_null
+      - name: signup_bonus_eur
+        description: "Signup bonus in EUR"
+        tests:
+          - not_null
+      - name: price_guarantee_months
+        description: "Number of months the price is guaranteed"
+        tests:
+          - not_null
+      - name: contract_length_months
+        description: "Minimum contract duration in months"
+        tests:
+          - not_null
+
+  - name: stg_consumption_levels
+    description: >
+      Lookup table of standard annual consumption reference levels (kWh/year)
+      used as comparison benchmarks in market-analysis models.
+      Electricity and gas each have four tiers (low / medium / high / max)
+      with different values to reflect typical consumption profiles.
+      Values are controlled by dbt_project.yml variables and can be overridden
+      at runtime.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - energy_type
+            - consumption_level_kwh
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ELECTRICITY', 'GAS']
+      - name: consumption_level_kwh
+        description: "Annual consumption benchmark in kWh"
+        tests:
+          - not_null
+      - name: consumption_label
+        description: "Human-readable tier label: low / medium / high / max"
+        tests:
+          - not_null
+
+  - name: stg_margin_scenarios
+    description: >
+      Lookup table of the three margin scenarios used in market-analysis
+      scenario modelling.  Values are controlled by dbt_project.yml variables
+      and can be overridden at runtime.
+
+        standard     — live PCW margins
+        aggressive   — lower margins for volume / growth positioning
+        conservative — higher margins for profitability / planning analysis
+    columns:
+      - name: scenario
+        description: "Scenario identifier: standard | aggressive | conservative"
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['standard', 'aggressive', 'conservative']
+      - name: elec_margin_ct
+        description: "Octopus electricity margin applied in this scenario (ct/kWh)"
+        tests:
+          - not_null
+      - name: gas_margin_ct
+        description: "Octopus gas margin applied in this scenario (ct/kWh)"
+        tests:
+          - not_null

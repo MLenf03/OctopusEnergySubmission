@@ -1,0 +1,241 @@
+scenario,margin_ct_per_kwh,energy_type,postcode,consumption_label,consumption_level_kwh,contract_length_months,provider,product,our_unit_rate_ct_per_kwh,our_standing_charge_eur_per_year,our_signup_bonus_eur,our_annual_cost_after_bonus_eur,our_rank,total_offers,cheaper_offers_count,percentile_rank,is_cheapest,is_top_3,avg_competitor_unit_rate_ct,avg_competitor_annual_cost_eur,min_competitor_annual_cost_eur,delta_vs_cheapest_competitor_eur,delta_rank_vs_standard
+aggressive,0.8,ELECTRICITY,10405,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,30.62346,63.44,14.109354000000002,355.564146,24,60,23,39.0,false,false,34.22,348.07,-180.53,536.09,0
+conservative,2.5,ELECTRICITY,10405,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,32.64646,63.44,14.412804000000001,375.490696,34,60,33,55.9,false,false,34.22,348.07,-180.53,556.02,10
+standard,1.5,ELECTRICITY,10405,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,31.456460000000003,63.44,14.234304000000002,363.769196,24,60,23,39.0,false,false,34.22,348.07,-180.53,544.3,0
+aggressive,0.8,ELECTRICITY,10405,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,30.62346,63.44,100.0,575.9081,4,57,3,5.4,false,false,34.2,649.62,223.17,352.74,-2
+conservative,2.5,ELECTRICITY,10405,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,32.64646,63.44,100.0,616.3681,17,57,16,28.6,false,false,34.2,649.62,223.17,393.2,11
+standard,1.5,ELECTRICITY,10405,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,31.456460000000003,63.44,100.0,592.5681000000001,6,57,5,8.9,false,false,34.2,649.62,223.17,369.4,0
+aggressive,0.8,ELECTRICITY,10405,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,30.62346,63.44,100.0,1341.4946000000002,4,49,3,6.3,false,false,34.07,1441.89,1232.42,109.07,-3
+conservative,2.5,ELECTRICITY,10405,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,32.64646,63.44,100.0,1432.5296,24,49,23,47.9,false,false,34.07,1441.89,1232.42,200.11,17
+standard,1.5,ELECTRICITY,10405,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,31.456460000000003,63.44,100.0,1378.9796000000001,7,49,6,12.5,false,false,34.07,1441.89,1232.42,146.56,0
+aggressive,0.8,ELECTRICITY,10405,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,30.62346,63.44,100.0,3638.2541000000006,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,10405,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,32.64646,63.44,100.0,3881.0141,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,10405,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,31.456460000000003,63.44,100.0,3738.2141000000006,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,26676,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,24.280759999999997,140.94,24.783654,358.96754599999997,14,55,13,24.1,false,false,26.99,381.39,213.62,145.35,-1
+conservative,2.5,ELECTRICITY,26676,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,26.303759999999997,140.94,25.087104,378.894096,18,55,17,31.5,false,false,26.99,381.39,213.62,165.27,3
+standard,1.5,ELECTRICITY,26676,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,25.113760000000003,140.94,24.908604,367.172596,15,55,14,25.9,false,false,26.99,381.39,213.62,153.55,0
+aggressive,0.8,ELECTRICITY,26676,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,24.280759999999997,140.94,93.98382,532.57498,4,53,3,5.8,false,false,26.88,603.05,489.52,43.05,-2
+conservative,2.5,ELECTRICITY,26676,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,26.303759999999997,140.94,100.0,567.0188,19,53,18,34.6,false,false,26.88,603.05,489.52,77.5,13
+standard,1.5,ELECTRICITY,26676,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,25.113760000000003,140.94,96.48282000000002,546.73598,6,53,5,9.6,false,false,26.88,603.05,489.52,57.22,0
+aggressive,0.8,ELECTRICITY,26676,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,24.280759999999997,140.94,100.0,1133.5778,3,48,2,4.3,false,true,26.74,1210.14,1108.68,24.9,-9
+conservative,2.5,ELECTRICITY,26676,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,26.303759999999997,140.94,100.0,1224.6127999999999,33,48,32,68.1,false,false,26.74,1210.14,1108.68,115.93,21
+standard,1.5,ELECTRICITY,26676,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,25.113760000000003,140.94,100.0,1171.0628000000002,12,48,11,23.4,false,false,26.74,1210.14,1108.68,62.38,0
+aggressive,0.8,ELECTRICITY,26676,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,24.280759999999997,140.94,100.0,2954.6348,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,26676,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,26.303759999999997,140.94,100.0,3197.3948,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,26676,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,25.113760000000003,140.94,100.0,3054.5948000000003,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,37586,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,26.993959999999994,146.72,26.056358999999997,390.59834099999995,16,56,15,27.3,false,false,29.06,407.27,239.41,151.19,-3
+conservative,2.5,ELECTRICITY,37586,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,29.016959999999997,146.72,26.359809,410.52489099999997,19,56,18,32.7,false,false,29.06,407.27,239.41,171.11,0
+standard,1.5,ELECTRICITY,37586,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,27.82696,146.72,26.181309,398.80339100000003,19,56,18,32.7,false,false,29.06,407.27,239.41,159.39,0
+aggressive,0.8,ELECTRICITY,37586,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,26.993959999999994,146.72,100.0,586.5942999999999,4,54,3,5.7,false,false,28.97,652.43,536.11,50.48,-2
+conservative,2.5,ELECTRICITY,37586,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,29.016959999999997,146.72,100.0,627.0542999999999,21,54,20,37.7,false,false,28.97,652.43,536.11,90.94,15
+standard,1.5,ELECTRICITY,37586,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,27.82696,146.72,100.0,603.2543000000001,6,54,5,9.4,false,false,28.97,652.43,536.11,67.14,0
+aggressive,0.8,ELECTRICITY,37586,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,26.993959999999994,146.72,100.0,1261.4433,8,49,7,14.6,false,false,28.89,1311.13,1195.83,65.61,-16
+conservative,2.5,ELECTRICITY,37586,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,29.016959999999997,146.72,100.0,1352.4782999999998,37,49,36,75.0,false,false,28.89,1311.13,1195.83,156.65,13
+standard,1.5,ELECTRICITY,37586,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,27.82696,146.72,100.0,1298.9283,24,49,23,47.9,false,false,28.89,1311.13,1195.83,103.1,0
+aggressive,0.8,ELECTRICITY,37586,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,26.993959999999994,146.72,100.0,3285.990299999999,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,37586,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,29.016959999999997,146.72,100.0,3528.7502999999997,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,37586,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,27.82696,146.72,100.0,3385.9503,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,38106,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,28.11256,94.03,18.321953999999998,356.83744599999994,15,57,14,25.0,false,false,33.08,368.69,-153.79,510.63,-2
+conservative,2.5,ELECTRICITY,38106,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,30.13556,94.03,18.625403999999996,376.76399599999996,19,57,18,32.1,false,false,33.08,368.69,-153.79,530.55,2
+standard,1.5,ELECTRICITY,38106,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,28.945559999999997,94.03,18.446903999999996,365.04249599999997,17,57,16,28.6,false,false,33.08,368.69,-153.79,518.83,0
+aggressive,0.8,ELECTRICITY,38106,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,28.11256,94.03,98.44274999999998,557.8422499999999,3,55,2,3.7,false,true,33.03,655.22,235.41,322.43,-1
+conservative,2.5,ELECTRICITY,38106,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,30.13556,94.03,100.0,596.7449999999999,6,55,5,9.3,false,false,33.03,655.22,235.41,361.34,2
+standard,1.5,ELECTRICITY,38106,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,28.945559999999997,94.03,100.0,572.9449999999999,4,55,3,5.6,false,false,33.03,655.22,235.41,337.54,0
+aggressive,0.8,ELECTRICITY,38106,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,28.11256,94.03,100.0,1259.0989999999997,2,49,1,2.1,false,true,32.91,1414.98,1208.41,50.69,-1
+conservative,2.5,ELECTRICITY,38106,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,30.13556,94.03,100.0,1350.134,7,49,6,12.5,false,false,32.91,1414.98,1208.41,141.72,4
+standard,1.5,ELECTRICITY,38106,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,28.945559999999997,94.03,100.0,1296.5839999999998,3,49,2,4.2,false,true,32.91,1414.98,1208.41,88.17,0
+aggressive,0.8,ELECTRICITY,38106,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,28.11256,94.03,100.0,3367.5409999999997,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,38106,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,30.13556,94.03,100.0,3610.3010000000004,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,38106,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,28.945559999999997,94.03,100.0,3467.5009999999997,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,46325,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,31.64686,124.6,23.437763999999998,417.63573599999995,23,57,22,39.3,false,false,33.78,406.24,-121.64,539.28,-7
+conservative,2.5,ELECTRICITY,46325,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,33.66986,124.6,23.741213999999996,437.562286,39,57,38,67.9,false,false,33.78,406.24,-121.64,559.2,9
+standard,1.5,ELECTRICITY,46325,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,32.47986,124.6,23.562713999999996,425.840786,30,57,29,51.8,false,false,33.78,406.24,-121.64,547.48,0
+aggressive,0.8,ELECTRICITY,46325,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,31.64686,124.6,100.0,657.5420999999999,9,54,8,15.1,false,false,33.65,694.8,274.16,383.38,-16
+conservative,2.5,ELECTRICITY,46325,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,33.66986,124.6,100.0,698.0020999999999,30,54,29,54.7,false,false,33.65,694.8,274.16,423.84,5
+standard,1.5,ELECTRICITY,46325,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,32.47986,124.6,100.0,674.2021,25,54,24,45.3,false,false,33.65,694.8,274.16,400.04,0
+aggressive,0.8,ELECTRICITY,46325,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,31.64686,124.6,100.0,1448.7136,19,48,18,38.3,false,false,33.66,1472.46,1263.66,185.05,-13
+conservative,2.5,ELECTRICITY,46325,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,33.66986,124.6,100.0,1539.7486000000001,39,48,38,80.9,false,false,33.66,1472.46,1263.66,276.09,7
+standard,1.5,ELECTRICITY,46325,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,32.47986,124.6,100.0,1486.1986,32,48,31,66.0,false,false,33.66,1472.46,1263.66,222.54,0
+aggressive,0.8,ELECTRICITY,46325,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,31.64686,124.6,100.0,3822.2281,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,46325,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,33.66986,124.6,100.0,4064.9881000000005,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,46325,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,32.47986,124.6,100.0,3922.1881,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,47574,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,32.586960000000005,117.66,22.536338999999998,420.988561,33,56,32,58.2,false,false,35.78,406.74,194.5,226.49,-4
+conservative,2.5,ELECTRICITY,47574,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,34.60996000000001,117.66,22.839788999999996,440.915111,42,56,41,74.5,false,false,35.78,406.74,194.5,246.42,5
+standard,1.5,ELECTRICITY,47574,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,33.41996,117.66,22.661288999999996,429.19361100000003,37,56,36,65.5,false,false,35.78,406.74,194.5,234.69,0
+aggressive,0.8,ELECTRICITY,47574,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,32.586960000000005,117.66,100.0,669.3945000000001,5,54,4,7.5,false,false,36.07,724.42,572.6,96.79,-13
+conservative,2.5,ELECTRICITY,47574,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,34.60996000000001,117.66,100.0,709.8545000000001,29,54,28,52.8,false,false,36.07,724.42,572.6,137.25,11
+standard,1.5,ELECTRICITY,47574,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,33.41996,117.66,100.0,686.0545000000001,18,54,17,32.1,false,false,36.07,724.42,572.6,113.45,0
+aggressive,0.8,ELECTRICITY,47574,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,32.586960000000005,117.66,100.0,1484.0685,10,46,9,20.0,false,false,35.77,1557.0,1407.97,76.1,-3
+conservative,2.5,ELECTRICITY,47574,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,34.60996000000001,117.66,100.0,1575.1035000000002,29,46,28,62.2,false,false,35.77,1557.0,1407.97,167.13,16
+standard,1.5,ELECTRICITY,47574,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,33.41996,117.66,100.0,1521.5535,13,46,12,26.7,false,false,35.77,1557.0,1407.97,113.58,0
+aggressive,0.8,ELECTRICITY,47574,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,32.586960000000005,117.66,100.0,3928.0905000000002,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,47574,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,34.60996000000001,117.66,100.0,4170.850500000001,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,47574,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,33.41996,117.66,100.0,4028.0505000000003,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,57413,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,31.349359999999997,117.14,22.273943999999997,408.363256,21,57,20,35.7,false,false,33.19,403.43,-118.44,526.8,-6
+conservative,2.5,ELECTRICITY,57413,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,33.37236,117.14,22.577394,428.289806,34,57,33,58.9,false,false,33.19,403.43,-118.44,546.73,7
+standard,1.5,ELECTRICITY,57413,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,32.182359999999996,117.14,22.398893999999995,416.568306,27,57,26,46.4,false,false,33.19,403.43,-118.44,535.01,0
+aggressive,0.8,ELECTRICITY,57413,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,31.349359999999997,117.14,100.0,644.1307999999999,8,55,7,13.0,false,false,33.05,689.12,270.06,374.07,-15
+conservative,2.5,ELECTRICITY,57413,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,33.37236,117.14,100.0,684.5908000000001,28,55,27,50.0,false,false,33.05,689.12,270.06,414.53,5
+standard,1.5,ELECTRICITY,57413,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,32.182359999999996,117.14,100.0,660.7908,23,55,22,40.7,false,false,33.05,689.12,270.06,390.73,0
+aggressive,0.8,ELECTRICITY,57413,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,31.349359999999997,117.14,100.0,1427.8647999999998,21,49,20,41.7,false,false,32.88,1450.35,1240.77,187.09,-12
+conservative,2.5,ELECTRICITY,57413,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,33.37236,117.14,100.0,1518.8998000000001,38,49,37,77.1,false,false,32.88,1450.35,1240.77,278.13,5
+standard,1.5,ELECTRICITY,57413,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,32.182359999999996,117.14,100.0,1465.3498,33,49,32,66.7,false,false,32.88,1450.35,1240.77,224.58,0
+aggressive,0.8,ELECTRICITY,57413,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,31.349359999999997,117.14,100.0,3779.0667999999996,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,57413,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,33.37236,117.14,100.0,4021.8268,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,57413,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,32.182359999999996,117.14,100.0,3879.0267999999996,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,71691,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,29.48106,124.56,23.105754,396.262146,14,60,13,22.0,false,false,32.83,431.97,-87.64,483.9,0
+conservative,2.5,ELECTRICITY,71691,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,31.50406,124.56,23.409204,416.188696,15,60,14,23.7,false,false,32.83,431.97,-87.64,503.83,1
+standard,1.5,ELECTRICITY,71691,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,30.314060000000005,124.56,23.230704,404.46719600000006,14,60,13,22.0,false,false,32.83,431.97,-87.64,492.11,0
+aggressive,0.8,ELECTRICITY,71691,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,29.48106,124.56,100.0,614.1785,3,58,2,3.5,false,true,32.71,718.98,297.26,316.92,0
+conservative,2.5,ELECTRICITY,71691,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,31.50406,124.56,100.0,654.6385,3,58,2,3.5,false,true,32.71,718.98,297.26,357.38,0
+standard,1.5,ELECTRICITY,71691,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,30.314060000000005,124.56,100.0,630.8385000000001,3,58,2,3.5,false,true,32.71,718.98,297.26,333.58,0
+aggressive,0.8,ELECTRICITY,71691,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,29.48106,124.56,100.0,1351.205,3,54,2,3.8,false,true,32.67,1473.88,1259.51,91.69,-2
+conservative,2.5,ELECTRICITY,71691,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,31.50406,124.56,100.0,1442.24,22,54,21,39.6,false,false,32.67,1473.88,1259.51,182.73,17
+standard,1.5,ELECTRICITY,71691,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,30.314060000000005,124.56,100.0,1388.69,5,54,4,7.5,false,false,32.67,1473.88,1259.51,129.18,0
+aggressive,0.8,ELECTRICITY,71691,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,29.48106,124.56,100.0,3562.2844999999998,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,71691,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,31.50406,124.56,100.0,3805.0445,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,71691,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,30.314060000000005,124.56,100.0,3662.2445000000002,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,81671,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,29.445359999999997,99.09,19.280498999999995,374.26440099999996,18,59,17,29.3,false,false,33.15,368.78,-167.57,541.83,-10
+conservative,2.5,ELECTRICITY,81671,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,31.46836,99.09,19.583948999999997,394.190951,38,59,37,63.8,false,false,33.15,368.78,-167.57,561.76,10
+standard,1.5,ELECTRICITY,81671,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,30.27836,99.09,19.405448999999997,382.469451,28,59,27,46.6,false,false,33.15,368.78,-167.57,550.04,0
+aggressive,0.8,ELECTRICITY,81671,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,29.445359999999997,99.09,100.0,587.9984999999999,4,55,3,5.6,false,false,33.04,658.37,226.23,361.77,-2
+conservative,2.5,ELECTRICITY,81671,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,31.46836,99.09,100.0,628.4585,21,55,20,37.0,false,false,33.04,658.37,226.23,402.23,15
+standard,1.5,ELECTRICITY,81671,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,30.27836,99.09,100.0,604.6585,6,55,5,9.3,false,false,33.04,658.37,226.23,378.43,0
+aggressive,0.8,ELECTRICITY,81671,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,29.445359999999997,99.09,100.0,1324.1325,4,50,3,6.1,false,false,33.14,1426.54,1210.73,113.4,-4
+conservative,2.5,ELECTRICITY,81671,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,31.46836,99.09,100.0,1415.1675,25,50,24,49.0,false,false,33.14,1426.54,1210.73,204.44,17
+standard,1.5,ELECTRICITY,81671,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,30.27836,99.09,100.0,1361.6175,8,50,7,14.3,false,false,33.14,1426.54,1210.73,150.89,0
+aggressive,0.8,ELECTRICITY,81671,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,29.445359999999997,99.09,100.0,3532.5344999999998,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,81671,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,31.46836,99.09,100.0,3775.2945,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,81671,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,30.27836,99.09,100.0,3632.4945,1,1,0,,true,true,,,,,0
+aggressive,0.8,ELECTRICITY,86470,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,25.33986,112.29,20.644239000000002,345.042761,17,57,16,28.6,false,false,27.92,359.61,189.76,155.28,0
+conservative,2.5,ELECTRICITY,86470,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,27.36286,112.29,20.947689,364.969311,26,57,25,44.6,false,false,27.92,359.61,189.76,175.21,9
+standard,1.5,ELECTRICITY,86470,low,1000,12,Octopus Energy,Select+ Secure 12 Strom,26.172860000000004,112.29,20.769189,353.24781100000007,17,57,16,28.6,false,false,27.92,359.61,189.76,163.49,0
+aggressive,0.8,ELECTRICITY,86470,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,25.33986,112.29,92.86283999999999,526.22276,5,55,4,7.4,false,false,27.82,594.18,457.28,68.94,-2
+conservative,2.5,ELECTRICITY,86470,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,27.36286,112.29,98.93184000000001,560.6137600000001,19,55,18,33.3,false,false,27.82,594.18,457.28,103.33,12
+standard,1.5,ELECTRICITY,86470,medium,2000,12,Octopus Energy,Select+ Secure 12 Strom,26.172860000000004,112.29,95.36184000000002,540.38376,7,55,6,11.1,false,false,27.82,594.18,457.28,83.1,0
+aggressive,0.8,ELECTRICITY,86470,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,25.33986,112.29,100.0,1152.5821,4,50,3,6.1,false,false,27.98,1229.83,1120.18,32.4,-12
+conservative,2.5,ELECTRICITY,86470,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,27.36286,112.29,100.0,1243.6171,34,50,33,67.3,false,false,27.98,1229.83,1120.18,123.44,18
+standard,1.5,ELECTRICITY,86470,high,4500,12,Octopus Energy,Select+ Secure 12 Strom,26.172860000000004,112.29,100.0,1190.0671,16,50,15,30.6,false,false,27.98,1229.83,1120.18,69.89,0
+aggressive,0.8,ELECTRICITY,86470,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,25.33986,112.29,100.0,3053.0716,1,1,0,,true,true,,,,,0
+conservative,2.5,ELECTRICITY,86470,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,27.36286,112.29,100.0,3295.8316,1,1,0,,true,true,,,,,0
+standard,1.5,ELECTRICITY,86470,max,12000,12,Octopus Energy,Select+ Secure 12 Strom,26.172860000000004,112.29,100.0,3153.0316000000003,1,1,0,,true,true,,,,,0
+aggressive,0.2,GAS,10405,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.88692,52.94,21.28517538,476.00392462,26,55,25,46.3,false,false,8.76,462.54,-145.5,621.5,-8
+conservative,1.0,GAS,10405,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.838919999999998,52.94,22.714603379999996,522.1744966199999,44,55,43,79.6,false,false,8.76,462.54,-145.5,667.67,10
+standard,0.5,GAS,10405,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.24392,52.94,21.82121088,493.31788911999996,34,55,33,61.1,false,false,8.76,462.54,-145.5,638.82,0
+aggressive,0.2,GAS,10405,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.815520000000001,57.2,140.0,975.0656999999999,22,47,21,45.7,false,false,8.71,992.02,576.2,398.87,-8
+conservative,1.0,GAS,10405,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.76752,57.2,140.0,1089.3057,39,47,38,82.6,false,false,8.71,992.02,576.2,513.11,9
+standard,0.5,GAS,10405,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.17252,57.2,140.0,1017.9057,30,47,29,63.0,false,false,8.71,992.02,576.2,441.71,0
+aggressive,0.2,GAS,10405,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.815520000000001,57.2,140.0,1856.6177,31,41,30,75.0,false,false,8.56,1799.23,1601.88,254.74,-8
+conservative,1.0,GAS,10405,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.76752,57.2,140.0,2066.0577,41,41,40,100.0,false,false,8.56,1799.23,1601.88,464.18,2
+standard,0.5,GAS,10405,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.17252,57.2,140.0,1935.1577000000002,39,41,38,95.0,false,false,8.56,1799.23,1601.88,333.28,0
+aggressive,0.2,GAS,10405,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.613219999999998,107.47,140.0,3412.7568999999994,34,34,33,100.0,false,false,8.47,3285.27,2957.32,455.44,0
+conservative,1.0,GAS,10405,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.56522,107.47,140.0,3793.5568999999996,34,34,33,100.0,false,false,8.47,3285.27,2957.32,836.24,0
+standard,0.5,GAS,10405,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.97022,107.47,140.0,3555.5568999999996,34,34,33,100.0,false,false,8.47,3285.27,2957.32,598.24,0
+aggressive,0.2,GAS,26676,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,7.95872,203.63,78.30917808,523.25962192,13,51,12,24.0,false,false,8.21,543.67,15.24,508.02,0
+conservative,1.0,GAS,26676,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.910719999999998,203.63,84.02260607999999,565.14619392,19,51,18,36.0,false,false,8.21,543.67,15.24,549.91,6
+standard,0.5,GAS,26676,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.315719999999999,203.63,80.45171358,538.9670864199999,13,51,12,24.0,false,false,8.21,543.67,15.24,523.73,0
+aggressive,0.2,GAS,26676,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,7.95872,203.63,140.0,1018.6792,19,44,18,41.9,false,false,8.01,1037.26,661.34,357.34,-8
+conservative,1.0,GAS,26676,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.910719999999998,203.63,140.0,1132.9191999999998,38,44,37,86.0,false,false,8.01,1037.26,661.34,471.58,11
+standard,0.5,GAS,26676,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.315719999999999,203.63,140.0,1061.5192,27,44,26,60.5,false,false,8.01,1037.26,661.34,400.18,0
+aggressive,0.2,GAS,26676,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,7.95872,203.63,140.0,1814.5512,30,39,29,76.3,false,false,7.95,1752.35,1565.59,248.96,-7
+conservative,1.0,GAS,26676,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.910719999999998,203.63,140.0,2023.9911999999995,39,39,38,100.0,false,false,7.95,1752.35,1565.59,458.4,2
+standard,0.5,GAS,26676,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.315719999999999,203.63,140.0,1893.0911999999998,37,39,36,94.7,false,false,7.95,1752.35,1565.59,327.5,0
+aggressive,0.2,GAS,26676,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,7.95872,203.63,140.0,3247.1207999999997,30,32,29,93.5,false,false,7.86,3110.92,2792.44,454.68,-2
+conservative,1.0,GAS,26676,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.910719999999998,203.63,140.0,3627.9207999999994,32,32,31,100.0,false,false,7.86,3110.92,2792.44,835.48,0
+standard,0.5,GAS,26676,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.315719999999999,203.63,140.0,3389.9207999999994,32,32,31,100.0,false,false,7.86,3110.92,2792.44,597.48,0
+aggressive,0.2,GAS,37586,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.220119999999998,35.62,19.186515179999997,477.4361848199999,22,51,21,42.0,false,false,9.03,469.54,3.72,473.72,-4
+conservative,1.0,GAS,37586,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.172119999999998,35.62,20.615943179999995,523.6067568199999,39,51,38,76.0,false,false,9.03,469.54,3.72,519.89,13
+standard,0.5,GAS,37586,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.577119999999999,35.62,19.722550679999994,494.75014931999993,26,51,25,50.0,false,false,9.03,469.54,3.72,491.03,0
+aggressive,0.2,GAS,37586,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.815520000000001,76.74,140.0,994.6054999999999,17,42,16,39.0,false,false,8.76,1025.41,730.32,264.29,-6
+conservative,1.0,GAS,37586,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.76752,76.74,140.0,1108.8455,37,42,36,87.8,false,false,8.76,1025.41,730.32,378.53,14
+standard,0.5,GAS,37586,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.17252,76.74,140.0,1037.4455,23,42,22,53.7,false,false,8.76,1025.41,730.32,307.13,0
+aggressive,0.2,GAS,37586,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.815520000000001,76.74,140.0,1876.1575,28,37,27,75.0,false,false,8.69,1816.83,1594.74,281.42,-7
+conservative,1.0,GAS,37586,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.76752,76.74,140.0,2085.5975,37,37,36,100.0,false,false,8.69,1816.83,1594.74,490.86,2
+standard,0.5,GAS,37586,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.17252,76.74,140.0,1954.6975000000002,35,37,34,94.4,false,false,8.69,1816.83,1594.74,359.96,0
+aggressive,0.2,GAS,37586,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.815520000000001,76.74,140.0,3462.9511,28,31,27,90.0,false,false,8.64,3329.71,3006.71,456.24,-3
+conservative,1.0,GAS,37586,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.76752,76.74,140.0,3843.7511,31,31,30,100.0,false,false,8.64,3329.71,3006.71,837.04,0
+standard,0.5,GAS,37586,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.17252,76.74,140.0,3605.7511000000004,31,31,30,100.0,false,false,8.64,3329.71,3006.71,599.04,0
+aggressive,0.2,GAS,38106,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.076519999999999,61.78,42.51389478,573.09690522,13,52,12,23.5,false,false,10.97,573.77,-59.17,632.27,-10
+conservative,1.0,GAS,38106,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,12.028519999999999,61.78,45.37132277999999,617.8394772199999,32,52,31,60.8,false,false,10.97,573.77,-59.17,677.01,9
+standard,0.5,GAS,38106,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.43352,61.78,43.585430280000004,589.8753697200001,23,52,22,43.1,false,false,10.97,573.77,-59.17,649.05,0
+aggressive,0.2,GAS,38106,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.71952,97.48,140.0,1243.8272,18,43,17,40.5,false,false,10.72,1259.46,780.13,463.7,-8
+conservative,1.0,GAS,38106,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.671519999999997,97.48,140.0,1358.0671999999997,38,43,37,88.1,false,false,10.72,1259.46,780.13,577.94,12
+standard,0.5,GAS,38106,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.076519999999999,97.48,140.0,1286.6671999999999,26,43,25,59.5,false,false,10.72,1259.46,780.13,506.54,0
+aggressive,0.2,GAS,38106,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.71952,97.48,140.0,2315.7792,30,39,29,76.3,false,false,10.63,2240.88,1979.13,336.65,-9
+conservative,1.0,GAS,38106,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.671519999999997,97.48,140.0,2525.2191999999995,39,39,38,100.0,false,false,10.63,2240.88,1979.13,546.09,0
+standard,0.5,GAS,38106,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.076519999999999,97.48,140.0,2394.3192,39,39,38,100.0,false,false,10.63,2240.88,1979.13,415.19,0
+aggressive,0.2,GAS,38106,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.612419999999998,123.66,140.0,4228.632799999999,33,33,32,100.0,false,false,10.55,4091.7,3767.96,460.67,0
+conservative,1.0,GAS,38106,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.564419999999998,123.66,140.0,4609.432799999999,33,33,32,100.0,false,false,10.55,4091.7,3767.96,841.47,0
+standard,0.5,GAS,38106,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.96942,123.66,140.0,4371.4328000000005,33,33,32,100.0,false,false,10.55,4091.7,3767.96,603.47,0
+aggressive,0.2,GAS,46325,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.72032,44.52,32.85172548,447.68217452,25,49,24,50.0,false,false,8.64,436.27,-137.78,585.46,-1
+conservative,1.0,GAS,46325,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.672319999999997,44.52,35.70915347999999,492.4247465199999,36,49,35,72.9,false,false,8.64,436.27,-137.78,630.2,10
+standard,0.5,GAS,46325,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.07732,44.52,33.92326098,464.46063902,26,49,25,52.1,false,false,8.64,436.27,-137.78,602.24,0
+aggressive,0.2,GAS,46325,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.57752,58.77,140.0,948.0765000000001,17,46,16,35.6,false,false,8.5,977.07,563.62,384.46,-8
+conservative,1.0,GAS,46325,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.52952,58.77,140.0,1062.3165000000001,42,46,41,91.1,false,false,8.5,977.07,563.62,498.7,17
+standard,0.5,GAS,46325,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.93452,58.77,140.0,990.9165,25,46,24,53.3,false,false,8.5,977.07,563.62,427.3,0
+aggressive,0.2,GAS,46325,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.57752,58.77,140.0,1805.8285,30,40,29,74.4,false,false,8.4,1746.68,1557.64,248.19,-9
+conservative,1.0,GAS,46325,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.52952,58.77,140.0,2015.2685000000001,40,40,39,100.0,false,false,8.4,1746.68,1557.64,457.63,1
+standard,0.5,GAS,46325,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.93452,58.77,140.0,1884.3685,39,40,38,97.4,false,false,8.4,1746.68,1557.64,326.73,0
+aggressive,0.2,GAS,46325,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.482319999999998,82.53,140.0,3335.4544999999994,33,34,32,97.0,false,false,8.31,3202.64,2884.94,450.51,-1
+conservative,1.0,GAS,46325,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.43432,82.53,140.0,3716.2544999999996,34,34,33,100.0,false,false,8.31,3202.64,2884.94,831.31,0
+standard,0.5,GAS,46325,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.839319999999999,82.53,140.0,3478.2544999999996,34,34,33,100.0,false,false,8.31,3202.64,2884.94,593.31,0
+aggressive,0.2,GAS,47574,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.612819999999997,57.32,37.451224229999994,500.5120757699999,24,51,23,46.0,false,false,9.57,483.84,-186.85,687.36,-1
+conservative,1.0,GAS,47574,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.564819999999997,57.32,40.30865222999999,545.2546477699999,38,51,37,74.0,false,false,9.57,483.84,-186.85,732.1,13
+standard,0.5,GAS,47574,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.969819999999999,57.32,38.52275973,517.29054027,25,51,24,48.0,false,false,9.57,483.84,-186.85,704.14,0
+aggressive,0.2,GAS,47574,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.517619999999999,66.84,140.0,1068.9567,18,45,17,38.6,false,false,9.42,1087.01,595.05,473.91,-6
+conservative,1.0,GAS,47574,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.469619999999997,66.84,140.0,1183.1966999999997,40,45,39,88.6,false,false,9.42,1087.01,595.05,588.15,16
+standard,0.5,GAS,47574,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.874619999999998,66.84,140.0,1111.7966999999999,24,45,23,52.3,false,false,9.42,1087.01,595.05,516.75,0
+aggressive,0.2,GAS,47574,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.517619999999999,66.84,140.0,2020.7186999999994,30,39,29,76.3,false,false,9.34,1952.06,1712.05,308.67,-8
+conservative,1.0,GAS,47574,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.469619999999997,66.84,140.0,2230.158699999999,39,39,38,100.0,false,false,9.34,1952.06,1712.05,518.11,1
+standard,0.5,GAS,47574,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.874619999999998,66.84,140.0,2099.2586999999994,38,39,37,97.4,false,false,9.34,1952.06,1712.05,387.21,0
+aggressive,0.2,GAS,47574,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.32722,114.44,140.0,3705.3303,32,33,31,96.9,false,false,9.22,3566.36,3247.91,457.42,-1
+conservative,1.0,GAS,47574,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.27922,114.44,140.0,4086.1303,33,33,32,100.0,false,false,9.22,3566.36,3247.91,838.22,0
+standard,0.5,GAS,47574,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.68422,114.44,140.0,3848.1303000000003,33,33,32,100.0,false,false,9.22,3566.36,3247.91,600.22,0
+aggressive,0.2,GAS,57413,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.672319999999997,45.91,9.788225999999998,519.7379739999999,30,51,29,58.0,false,false,9.62,492.23,-181.13,700.87,-7
+conservative,1.0,GAS,57413,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.624319999999997,45.91,10.073825999999999,567.0523739999999,46,51,45,90.0,false,false,9.62,492.23,-181.13,748.18,9
+standard,0.5,GAS,57413,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.029319999999998,45.91,9.895325999999999,537.480874,37,51,36,72.0,false,false,9.62,492.23,-181.13,718.61,0
+aggressive,0.2,GAS,57413,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.672319999999997,45.91,140.0,1066.5885999999998,16,43,15,35.7,false,false,9.56,1092.02,602.17,464.42,-8
+conservative,1.0,GAS,57413,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.624319999999997,45.91,140.0,1180.8285999999998,38,43,37,88.1,false,false,9.56,1092.02,602.17,578.66,14
+standard,0.5,GAS,57413,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.029319999999998,45.91,140.0,1109.4286,24,43,23,54.8,false,false,9.56,1092.02,602.17,507.26,0
+aggressive,0.2,GAS,57413,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.52952,75.18,140.0,2031.6786000000002,28,38,27,73.0,false,false,9.42,1964.23,1721.17,310.51,-9
+conservative,1.0,GAS,57413,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.481519999999998,75.18,140.0,2241.1186,38,38,37,100.0,false,false,9.42,1964.23,1721.17,519.95,1
+standard,0.5,GAS,57413,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.88652,75.18,140.0,2110.2186,37,38,36,97.3,false,false,9.42,1964.23,1721.17,389.05,0
+aggressive,0.2,GAS,57413,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.52952,75.18,140.0,3746.9922,31,32,30,96.8,false,false,9.36,3606.99,3290.69,456.3,-1
+conservative,1.0,GAS,57413,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.481519999999998,75.18,140.0,4127.792199999999,32,32,31,100.0,false,false,9.36,3606.99,3290.69,837.1,0
+standard,0.5,GAS,57413,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.88652,75.18,140.0,3889.7922000000003,32,32,31,100.0,false,false,9.36,3606.99,3290.69,599.1,0
+aggressive,0.2,GAS,71691,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.219719999999999,42.72,9.474065999999999,544.2329339999999,28,51,27,54.0,false,false,10.1,529.53,25.48,518.75,-7
+conservative,1.0,GAS,71691,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.171719999999999,42.72,9.759665999999998,591.5473339999999,46,51,45,90.0,false,false,10.1,529.53,25.48,566.07,11
+standard,0.5,GAS,71691,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.57672,42.72,9.581165999999998,561.975834,35,51,34,68.0,false,false,10.1,529.53,25.48,536.5,0
+aggressive,0.2,GAS,71691,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.20782,42.72,140.0,1127.6594,15,43,14,33.3,false,false,9.9,1173.34,873.18,254.48,-4
+conservative,1.0,GAS,71691,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.159819999999998,42.72,140.0,1241.8993999999998,36,43,35,83.3,false,false,9.9,1173.34,873.18,368.72,17
+standard,0.5,GAS,71691,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.56482,42.72,140.0,1170.4994,19,43,18,42.9,false,false,9.9,1173.34,873.18,297.32,0
+aggressive,0.2,GAS,71691,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.20782,42.72,140.0,2148.4413999999997,26,37,25,69.4,false,false,9.73,2102.25,1884.16,264.28,-9
+conservative,1.0,GAS,71691,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.159819999999998,42.72,140.0,2357.8813999999998,37,37,36,100.0,false,false,9.73,2102.25,1884.16,473.72,2
+standard,0.5,GAS,71691,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.56482,42.72,140.0,2226.9814,35,37,34,94.4,false,false,9.73,2102.25,1884.16,342.82,0
+aggressive,0.2,GAS,71691,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.20782,42.72,140.0,3985.8489999999993,31,31,30,100.0,false,false,9.75,3827.13,3437.75,548.1,0
+conservative,1.0,GAS,71691,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,11.159819999999998,42.72,140.0,4366.6489999999985,31,31,30,100.0,false,false,9.75,3827.13,3437.75,928.9,0
+standard,0.5,GAS,71691,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.56482,42.72,140.0,4128.648999999999,31,31,30,100.0,false,false,9.75,3827.13,3437.75,690.9,0
+aggressive,0.2,GAS,81671,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.672319999999997,41.53,9.131345999999999,516.0156539999999,27,49,26,54.2,false,false,9.34,487.66,-165.19,681.21,-7
+conservative,1.0,GAS,81671,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.624319999999997,41.53,9.416946,563.3300539999998,46,49,45,93.8,false,false,9.34,487.66,-165.19,728.52,12
+standard,0.5,GAS,81671,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.029319999999998,41.53,9.238446,533.758554,34,49,33,68.8,false,false,9.34,487.66,-165.19,698.95,0
+aggressive,0.2,GAS,81671,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.12492,80.17,140.0,1035.1607,18,42,17,41.5,false,false,9.06,1058.49,583.81,451.35,-5
+conservative,1.0,GAS,81671,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.07692,80.17,140.0,1149.4007,38,42,37,90.2,false,false,9.06,1058.49,583.81,565.59,15
+standard,0.5,GAS,81671,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.481919999999999,80.17,140.0,1078.0006999999998,23,42,22,53.7,false,false,9.06,1058.49,583.81,494.19,0
+aggressive,0.2,GAS,81671,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.12492,80.17,140.0,1947.6526999999996,27,38,26,70.3,false,false,8.99,1883.76,1653.81,293.84,-11
+conservative,1.0,GAS,81671,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.07692,80.17,140.0,2157.0927,38,38,37,100.0,false,false,8.99,1883.76,1653.81,503.28,0
+standard,0.5,GAS,81671,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.481919999999999,80.17,140.0,2026.1926999999996,38,38,37,100.0,false,false,8.99,1883.76,1653.81,372.38,0
+aggressive,0.2,GAS,81671,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.12492,80.17,140.0,3590.1382999999996,32,32,31,100.0,false,false,8.94,3448.49,3134.74,455.4,0
+conservative,1.0,GAS,81671,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.07692,80.17,140.0,3970.9383,32,32,31,100.0,false,false,8.94,3448.49,3134.74,836.2,0
+standard,0.5,GAS,81671,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.481919999999999,80.17,140.0,3732.9383,32,32,31,100.0,false,false,8.94,3448.49,3134.74,598.2,0
+aggressive,0.2,GAS,86470,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.291519999999998,36.87,8.317385999999999,493.12481399999996,27,48,26,55.3,false,false,9.02,463.27,-78.79,571.91,-7
+conservative,1.0,GAS,86470,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,10.243519999999998,36.87,8.602986,540.439214,46,48,45,95.7,false,false,9.02,463.27,-78.79,619.23,12
+standard,0.5,GAS,86470,low,5000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.64852,36.87,8.424486,510.867714,34,48,33,70.2,false,false,9.02,463.27,-78.79,589.66,0
+aggressive,0.2,GAS,86470,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.79172,76.66,140.0,991.6661999999999,17,42,16,39.0,false,false,8.71,1016.31,630.31,361.36,-7
+conservative,1.0,GAS,86470,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.743719999999998,76.66,140.0,1105.9061999999997,37,42,36,87.8,false,false,8.71,1016.31,630.31,475.6,13
+standard,0.5,GAS,86470,medium,12000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.14872,76.66,140.0,1034.5062,24,42,23,56.1,false,false,8.71,1016.31,630.31,404.2,0
+aggressive,0.2,GAS,86470,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.79172,76.66,140.0,1870.8382,28,37,27,75.0,false,false,8.6,1806.55,1619.54,251.3,-8
+conservative,1.0,GAS,86470,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.743719999999998,76.66,140.0,2080.2781999999997,37,37,36,100.0,false,false,8.6,1806.55,1619.54,460.74,1
+standard,0.5,GAS,86470,high,22000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.14872,76.66,140.0,1949.3782,36,37,35,97.2,false,false,8.6,1806.55,1619.54,329.84,0
+aggressive,0.2,GAS,86470,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,8.672719999999998,104.36,140.0,3433.4509999999996,31,32,30,96.8,false,false,8.56,3296.05,2971.67,461.78,-1
+conservative,1.0,GAS,86470,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.62472,104.36,140.0,3814.2509999999993,32,32,31,100.0,false,false,8.56,3296.05,2971.67,842.58,0
+standard,0.5,GAS,86470,max,40000,12,Octopus Energy,OctopusSelect+ 12 Gas,9.02972,104.36,140.0,3576.2509999999997,32,32,31,100.0,false,false,8.56,3296.05,2971.67,604.58,0

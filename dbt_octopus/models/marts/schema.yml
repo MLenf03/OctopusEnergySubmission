@@ -1,0 +1,248 @@
+version: 2
+
+models:
+  - name: fct_price_list
+    description: >
+      Final PCW-formatted price list for Octopus Energy's two tariffs:
+      "Select+ Secure 12 Strom" (electricity) and "OctopusSelect+ 12 Gas".
+      Standard margin scenario only.  One row per
+      (product × postcode × consumption_band × consumption_level).
+
+      Pricing formula:
+        unit_rate_gross = (basecost_net + procurement_cost + margin) × (1 + VAT)
+        standing_charge_gross_monthly = basecost_net_annual × (1 + VAT) / 12
+
+      Signup bonus is capped at 15% of the annual gross price evaluated at each
+      reference consumption level (from stg_consumption_levels), not at the band
+      midpoint.  This ensures the cap is accurate at every standard reference point
+      rather than at an artificial midpoint of a potentially wide band.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - energy_type
+            - product_name
+            - postcode
+            - consumption_level_kwh
+    columns:
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ELECTRICITY', 'GAS']
+      - name: consumption_level_kwh
+        description: "Reference consumption level (kWh/year) at which the bonus cap is evaluated"
+        tests:
+          - not_null
+      - name: consumption_label
+        description: "Human-readable consumption tier: low / medium / high / max"
+        tests:
+          - not_null
+      - name: product_name
+        description: "Octopus product name"
+        tests:
+          - not_null
+      - name: postcode
+        description: "German postcode (PLZ)"
+        tests:
+          - not_null
+      - name: town
+        description: "Town / city"
+      - name: consumption_from
+        description: "Lower bound of consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: consumption_to
+        description: "Upper bound of consumption band (kWh/year)"
+        tests:
+          - not_null
+      - name: unit_rate_gross_ct_per_kwh
+        description: "Gross (incl. VAT) unit rate in ct/kWh"
+        tests:
+          - not_null
+      - name: standing_charge_gross_eur_per_month
+        description: "Gross (incl. VAT) monthly standing charge in EUR"
+        tests:
+          - not_null
+      - name: signup_bonus
+        description: "Signup bonus in EUR (capped at 15% of annual price)"
+        tests:
+          - not_null
+      - name: contract_length
+        description: "Minimum contract duration in months"
+        tests:
+          - not_null
+      - name: price_guarantee
+        description: "Price guarantee period in months"
+        tests:
+          - not_null
+      - name: unit_rate_net_ct_per_kwh
+        description: "Net (excl. VAT) unit rate in ct/kWh"
+      - name: basecost_unit_rate_ct_per_kwh
+        description: "Regulatory/network component of the unit rate in ct/kWh (net)"
+      - name: procurement_unit_rate_ct_per_kwh
+        description: "Wholesale procurement component of the unit rate in ct/kWh (net)"
+      - name: margin_ct_per_kwh
+        description: "Octopus margin component of the unit rate in ct/kWh (net)"
+      - name: annual_gross_eur
+        description: >
+          Annual gross price at the reference consumption level and standard margin
+          (unit_rate_gross × consumption_level_kwh + standing_charge × 12).
+      - name: annual_gross_at_from_eur
+        description: "Annual gross price evaluated at the PCW band's lower boundary (used for the 15% bonus cap)"
+      - name: annual_margin_eur
+        description: >
+          Estimated annual customer margin at the reference consumption level,
+          after amortised lead and signup bonus costs.
+
+  - name: fct_market_performance_summary
+    description: >
+      Executive summary of Octopus Energy's competitive position across all
+      three margin scenarios (standard, aggressive, conservative).
+
+      Rows are broken down by (scenario × energy_type × product × consumption_label)
+      so that win-rates can be compared across scenarios and the four standard
+      consumption levels.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - scenario
+            - energy_type
+            - product
+            - consumption_level_kwh
+            - contract_length_months
+    columns:
+      - name: scenario
+        description: "standard | aggressive | conservative"
+        tests:
+          - not_null
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+      - name: product
+        description: "Octopus product name"
+        tests:
+          - not_null
+      - name: consumption_label
+        description: "Human-readable consumption tier: low / medium / high / max"
+        tests:
+          - not_null
+      - name: consumption_level_kwh
+        description: "Annual consumption at which comparison is made"
+        tests:
+          - not_null
+      - name: contract_length_months
+        description: "Contract duration (months)"
+        tests:
+          - not_null
+      - name: margin_ct_per_kwh
+        description: "Octopus margin applied in this scenario (ct/kWh)"
+      - name: total_market_segments
+        description: "Number of postcodes (segments) in this group"
+      - name: segments_where_cheapest
+        description: "Segments where Octopus is the cheapest offer"
+      - name: segments_where_top_3
+        description: "Segments where Octopus is in the top 3"
+      - name: pct_cheapest
+        description: "Percentage of segments where Octopus is the cheapest"
+      - name: pct_top_3
+        description: "Percentage of segments where Octopus is in the top 3"
+      - name: avg_rank
+        description: "Average rank across segments (1 = cheapest)"
+      - name: avg_percentile
+        description: "Average percentile rank across segments (0 = cheapest, 100 = most expensive)"
+      - name: avg_delta_vs_cheapest_eur
+        description: "Average annual cost difference vs. cheapest competitor (EUR)"
+      - name: avg_our_annual_cost_eur
+        description: "Average Octopus annual cost across segments (EUR)"
+      - name: avg_market_annual_cost_eur
+        description: "Average competitor annual cost across segments (EUR)"
+
+  - name: fct_market_analysis_scenarios
+    description: >
+      Scenario comparison: shows how Octopus's competitive ranking changes
+      under three margin assumptions (standard, aggressive, conservative).
+      Each scenario recomputes Octopus prices from the raw cost components
+      in int_price_components while keeping competitor prices unchanged.
+
+      Scenarios:
+        standard     — live PCW margins (electricity 1.5 ct/kWh, gas 0.5 ct/kWh)
+        aggressive   — lower margins for volume / growth positioning
+        conservative — higher margins for profitability / planning analysis
+
+      Signup bonus is computed per scenario and consumption level, correctly
+      differentiated by energy type (electricity_signup_bonus_eur vs
+      gas_signup_bonus_eur) with the 15% PCW cap applied at the actual
+      consumption level (from stg_consumption_levels), not at a band midpoint.
+
+      The delta_rank_vs_standard column shows how many rank positions are
+      gained (negative) or lost (positive) vs. the standard scenario.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - scenario
+            - energy_type
+            - product
+            - postcode
+            - consumption_level_kwh
+            - contract_length_months
+    columns:
+      - name: scenario
+        description: "standard | aggressive | conservative"
+        tests:
+          - not_null
+      - name: margin_ct_per_kwh
+        description: "Octopus margin applied in this scenario (ct/kWh) — electricity or gas value depending on energy_type"
+      - name: energy_type
+        description: "ELECTRICITY or GAS"
+        tests:
+          - not_null
+      - name: postcode
+        description: "German postcode"
+        tests:
+          - not_null
+      - name: consumption_label
+        description: "Human-readable consumption tier: low / medium / high / max"
+      - name: consumption_level_kwh
+        description: "Annual consumption level (kWh) at which comparison is made"
+        tests:
+          - not_null
+      - name: contract_length_months
+        description: "Contract duration in months"
+        tests:
+          - not_null
+      - name: provider
+        description: "Octopus Energy (always 'Octopus Energy' in this model)"
+      - name: product
+        description: "Octopus product name"
+      - name: our_unit_rate_ct_per_kwh
+        description: "Octopus gross unit rate in ct/kWh for this scenario"
+      - name: our_standing_charge_eur_per_year
+        description: "Octopus gross annual standing charge in EUR for this scenario"
+      - name: our_signup_bonus_eur
+        description: "Octopus signup bonus in EUR for this scenario (capped at 15% of annual price)"
+      - name: our_annual_cost_after_bonus_eur
+        description: "Octopus annual cost after signup bonus deduction (EUR)"
+      - name: our_rank
+        description: "Octopus rank by annual cost in this scenario (1 = cheapest)"
+      - name: total_offers
+        description: "Total number of offers (Octopus + competitors) in this market segment"
+      - name: cheaper_offers_count
+        description: "Number of offers cheaper than Octopus in this segment"
+      - name: percentile_rank
+        description: "Octopus percentile rank (0 = cheapest, 100 = most expensive)"
+      - name: is_cheapest
+        description: "True if Octopus is the cheapest offer in this segment"
+      - name: is_top_3
+        description: "True if Octopus is in the top 3 cheapest offers in this segment"
+      - name: avg_competitor_unit_rate_ct
+        description: "Average competitor unit rate in ct/kWh for this segment"
+      - name: avg_competitor_annual_cost_eur
+        description: "Average competitor annual cost in EUR for this segment"
+      - name: min_competitor_annual_cost_eur
+        description: "Cheapest competitor annual cost in EUR for this segment"
+      - name: delta_vs_cheapest_competitor_eur
+        description: "Annual cost difference vs. the cheapest competitor (positive = more expensive)"
+      - name: delta_rank_vs_standard
+        description: "Rank change vs. standard scenario (negative = improved, positive = worsened)"
